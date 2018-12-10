@@ -34,6 +34,7 @@ import javax.net.ssl.HttpsURLConnection;
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
     String[] rclass={"1AC","2AC","3AC","Sleeper","CC"};
     Calendar calendar;
+    String api_key="Enter YOUR API KEY HERE";
     String cl0="GN";
     String cl1="1A";
     int d,m,y;
@@ -105,7 +106,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 String s3=t4.getText().toString().trim();
                 String s5=cl0;
                 String s6=cl1;
-                String url="https://api.railwayapi.com/v2/check-seat/train/"+s+"/source/"+s1+"/dest/"+s2+"/date/"+s3+"/pref/"+s6+"/quota/"+s5+"/apikey/jhjnk6iqik/";
+                String url="https://api.railwayapi.com/v2/check-seat/train/"+s+"/source/"+s1+"/dest/"+s2+"/date/"+s3+"/pref/"+s6+"/quota/"+s5+"/apikey/"+api_key+"/";
                 URL myurl=new URL(url);
                 HttpsURLConnection con=(HttpsURLConnection) myurl.openConnection();
                 con.connect();
