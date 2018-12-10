@@ -36,6 +36,7 @@ public class Main2Activity extends AppCompatActivity implements AdapterView.OnIt
     String cl0="GN";
     String cl1="1A";
     int d,m,y;
+    String api_key="Enter YOUR API KEY HERE";
     EditText t1,t2,t3,t4,t5;
     ListView rlist;
     @Override
@@ -125,7 +126,7 @@ public class Main2Activity extends AppCompatActivity implements AdapterView.OnIt
                 String s4=t5.getText().toString().trim();
                 String s5=cl0;
                 String s6=cl1;
-                String url="https://api.railwayapi.com/v2/fare/train/"+s+"/source/"+s1+"/dest/"+s2+"/age/"+s3+"/pref/"+s6+"/quota/"+s5+"/date/"+s4+"/apikey/jhjnk6iqik/";
+                String url="https://api.railwayapi.com/v2/fare/train/"+s+"/source/"+s1+"/dest/"+s2+"/age/"+s3+"/pref/"+s6+"/quota/"+s5+"/date/"+s4+"/apikey/"+api_key+"/";
                 URL myurl=new URL(url);
                 HttpsURLConnection con=(HttpsURLConnection) myurl.openConnection();
                 con.connect();
