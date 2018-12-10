@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".Main2Activity">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Train Fare Enquiry"
+        android:layout_marginLeft="45dp"
+        android:textSize="35dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:text="Train Number"/>
+        <EditText
+            android:id="@+id/e1"
+            android:layout_marginLeft="7dp"
+            android:inputType="number"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="75dp"
+            android:text="Source"/>
+        <EditText
+            android:id="@+id/e2"
+            android:inputType="textCapCharacters"
+            android:layout_marginLeft="8dp"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:text="Destination"/>
+        <EditText
+            android:id="@+id/e3"
+            android:inputType="textCapCharacters"
+            android:layout_marginLeft="8dp"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="90dp"
+            android:text="Age"/>
+        <EditText
+            android:id="@+id/e4"
+            android:inputType="number"
+            android:layout_marginLeft="8dp"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="75dp"
+            android:text="Date"/>
+        <EditText
+            android:layout_marginLeft="19dp"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/e5"/>
+        <Button
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:id="@+id/bt1"
+            android:text=".."
+            android:onClick="btn_click1"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="14dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_marginTop="7dp"
+            android:text="Quota"
+            android:layout_marginLeft="45dp"
+            android:layout_height="wrap_content" />
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:orientation="horizontal">
+            <RadioButton android:id="@+id/gkcl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="General"
+                android:onClick="onRadioButtonClicked"/>
+            <RadioButton android:id="@+id/tkcl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tatkal"
+                android:onClick="onRadioButtonClicked"/>
+        </RadioGroup>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="45dp"
+            android:text="Class"/>
+        <Spinner
+            android:id="@+id/rail_dd"
+            android:layout_marginTop="23dp"
+            android:layout_marginStart="40dp"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp" />
+    </LinearLayout>
+    <Button
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="100dp"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Get Fare"
+        android:onClick="show_t"/>
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:id="@+id/rlist">
+
+    </ListView>
+
+</LinearLayout>
