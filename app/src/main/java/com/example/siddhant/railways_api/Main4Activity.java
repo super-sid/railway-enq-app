@@ -25,6 +25,7 @@ import javax.net.ssl.HttpsURLConnection;
 
 public class Main4Activity extends AppCompatActivity {
     EditText t1;
+    String api_key="Enter YOUR API KEY HERE";
     ListView mylist;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,7 +49,7 @@ public class Main4Activity extends AppCompatActivity {
 
             try {
                 String s= t1.getText().toString().trim();
-                String url="https://api.railwayapi.com/v2/route/train/"+s+"/apikey/jhjnk6iqik/";
+                String url="https://api.railwayapi.com/v2/route/train/"+s+"/apikey/"+api_key+"/";
                 URL myurl=new URL(url);
                 HttpsURLConnection con=(HttpsURLConnection) myurl.openConnection();
                 con.connect();
