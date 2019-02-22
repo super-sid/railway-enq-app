@@ -1,4 +1,4 @@
-# railway-enq-app
+# Railway Enquiry App
 A simple railway enquiry app which fetches data through Railway API.
 
 To fix the JSON error you have to input a valid API key the one that was there was expired and you'll either have to take the free trial from https://railwayapi.com/ or some other API website for IRCTC API fetching or you'll have to buy the API key from the given websites. If you get the API key
